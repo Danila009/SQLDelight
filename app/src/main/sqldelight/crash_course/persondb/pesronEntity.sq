@@ -1,0 +1,21 @@
+CREATE TABLE pesronEntity (
+    id INTEGER NOT NULL PRIMARY KEY,
+    firstName TEXT NOT NULL,
+    age INTEGER NOT NULL
+);
+
+getPersonId:
+SELECT * FROM pesronEntity WHERE id = : id;
+
+getPerson:
+SELECT * FROM pesronEntity;
+
+insertReson:
+INSERT OR REPLACE INTO  pesronEntity VALUES (?, ?, ?);
+
+deletePerson:
+DELETE FROM pesronEntity;
+
+deletePersonId:
+DELETE FROM pesronEntity WHERE id =: id;
+
